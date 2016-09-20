@@ -79,6 +79,65 @@ Route::post('/users/{id_user}',[
     'roles'=>['Admin'],
 ]);
 
+/*
+|--------------------------------------------------------------------------
+| Application Routes donvis
+|--------------------------------------------------------------------------
+*/
+Route::get('/donvi',[
+    'uses'=>'DonviController@index',
+    'as'=>'donvis',
+]);
+Route::get('/donvi/create',[
+    'uses'=>'DonviController@create',
+    'as'=>'donvi.create',
+]);
+Route::post('/donvi/create',[
+    'uses'=>'DonviController@store',
+    'as'=>'donvi.store',
+]);
+Route::get('/donvi/{id}',[
+    'uses'=>'DonviController@edit',
+    'as'=>'donvi.edit',
+]);
+Route::patch('/donvi/{id}',[
+   'uses'=>'DonviController@update',
+    'as'=>'donvi.update',
+]);
+Route::delete('/donvi/{id}',[
+    'uses'=>'DonviController@destroy',
+    'as'=>'donvi.destroy',
+]);
+/*
+|--------------------------------------------------------------------------
+| Application Routes buucucs
+|--------------------------------------------------------------------------
+*/
+Route::get('/buucuc',[
+    'uses'=>'BuucucController@index',
+    'as'=>'buucucs',
+]);
+Route::get('/buucuc/create',[
+    'uses'=>'BuucucController@create',
+    'as'=>'buucuc.create',
+]);
+Route::post('/buucuc/create',[
+    'uses'=>'BuucucController@store',
+    'as'=>'buucuc.store',
+]);
+Route::get('/buucuc/{id}',[
+    'uses'=>'BuucucController@edit',
+    'as'=>'buucuc.edit',
+]);
+Route::patch('/buucuc/{id}',[
+    'uses'=>'BuucucController@update',
+    'as'=>'buucuc.update',
+]);
+Route::delete('/buucuc/{id}',[
+    'uses'=>'BuucucController@destroy',
+    'as'=>'buucuc.destroy',
+]);
+
 
 
 Route::get('/home', 'HomeController@index');

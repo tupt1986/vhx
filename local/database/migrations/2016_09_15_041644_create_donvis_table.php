@@ -14,6 +14,9 @@ class CreateDonvisTable extends Migration
     {
         Schema::create('donvis', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('madonvi',4);
+            $table->string('tendonvi',50);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

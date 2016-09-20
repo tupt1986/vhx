@@ -14,6 +14,10 @@ class CreateBuucucsTable extends Migration
     {
         Schema::create('buucucs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('donvi_id');
+            $table->string('mabuucuc',6);
+            $table->string('tenbuucuc');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

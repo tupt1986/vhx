@@ -5,16 +5,17 @@
 @endif
 @section('title')
     QUẢN LÝ NGƯỜI DÙNG &nbsp;&nbsp;&nbsp;
-    <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/users/create')}}', '_self')">
-        <i class="icon-user-follow"></i> Thêm mới
-    </button>
 @endsection
 
 @section('content')
     <div class="headline">
         <h2 class="heading-sm">Danh sách người dùng - quyền truy cập</h2>
     </div>
-
+    <div class="row" align="right">
+        <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/users/create')}}', '_self')">
+            <i class="icon-user-follow"></i> Thêm mới
+        </button>
+    </div>
     <table class="table table-hover">
         <thead>
         <tr>

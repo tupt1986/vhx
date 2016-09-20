@@ -47,6 +47,12 @@
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="{{url('/')}}/assets/css/custom.css">
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url('/')}}/assets/plugins/back-to-top.js"></script>
+
+
 <body>
 <div class="wrapper">
     <!--=== Header ===-->
@@ -131,8 +137,8 @@
                                 <i class="icon-settings"></i> Thiết lập
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="index.php?cat=setting&act=viewdonvi">Quản lý đơn vị</a></li>
-                                <li><a href="index.php?cat=setting&act=viewbuucuc">Quản lý Bưu Cục</a></li>
+                                <li><a href="{{route('donvis')}}">Quản lý Đơn Vị</a></li>
+                                <li><a href="{{route('buucucs')}}">Quản lý Bưu Cục</a></li>
                                 <li><a href="{{route('users')}}"><i class="icon-users"></i>&nbsp;&nbsp;&nbsp;Quản lý người dùng</a></li>
                             </ul>
                         </li>
@@ -168,10 +174,6 @@
 </div>
 
 @include('flash::message')
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{url('/')}}/assets/plugins/back-to-top.js"></script>
-
 <script>
     $('#flash-overlay-modal').modal();
 </script>
