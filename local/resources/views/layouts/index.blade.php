@@ -137,8 +137,9 @@
                                 <i class="icon-settings"></i> Thiết lập
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('donvis')}}">Quản lý Đơn Vị</a></li>
-                                <li><a href="{{route('buucucs')}}">Quản lý Bưu Cục</a></li>
+                                <li><a href="{{route('donvis')}}">Quản lý đơn vị</a></li>
+                                <li><a href="{{route('buucucs')}}">Quản lý bưu cục</a></li>
+                                <li><a href="{{route('hanghoas')}}">Quản lý mã vật tư/hàng hóa</a></li>
                                 <li><a href="{{route('users')}}"><i class="icon-users"></i>&nbsp;&nbsp;&nbsp;Quản lý người dùng</a></li>
                             </ul>
                         </li>

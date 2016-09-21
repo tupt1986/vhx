@@ -102,21 +102,23 @@ class DonviController extends Controller
     {
         return view('donvi.import');
     }
+
     public function export()
     {
         $users = donvi::select('madonvi', 'tendonvi')->get();
-        Excel::create('export data', function($excel) use($users){
-            $excel->sheet('DS nguoi dung', function($sheet) use($users){
+        Excel::create('export data', function ($excel) use ($users) {
+            $excel->sheet('DS nguoi dung', function ($sheet) use ($users) {
                 $sheet->fromArray($users);
             })->export('xlsx');
         });
         return redirect('/donvi');
     }
 
-    public function insert(){
-        Excel::load(Input::file('file'), function ($reader){
-            $reader->each(function ($sheet){
-                foreach ($sheet->toArray() as $row){
+    public function insert()
+    {
+        Excel::load(Input::file('file'), function ($reader) {
+            $reader->each(function ($sheet) {
+                foreach ($sheet->toArray() as $row) {
                     $donvi = new donvi();
                     $donvi->madonvi = $row['madonvi'];
                     $donvi->tendonvi = $row['tendonvi'];

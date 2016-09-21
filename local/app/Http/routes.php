@@ -156,6 +156,45 @@ Route::delete('/buucuc/{id}',[
     'as'=>'buucuc.destroy',
 ]);
 
+/*
+|--------------------------------------------------------------------------
+| Application Routes hanghoas
+|--------------------------------------------------------------------------
+*/
+Route::get('/hanghoa',[
+    'uses'=>'HanghoaController@index',
+    'as'=>'hanghoas',
+]);
+Route::get('/hanghoa/import',[
+    'uses'=>'HanghoaController@import',
+    'as'=>'hanghoa.import',
+]);
+Route::post('/hanghoa/import',[
+    'uses'=>'HanghoaController@insert',
+    'as'=>'hanghoa.insert',
+]);
+
+Route::get('/hanghoa/create',[
+    'uses'=>'HanghoaController@create',
+    'as'=>'hanghoa.create',
+]);
+Route::post('/hanghoa/create',[
+    'uses'=>'HanghoaController@store',
+    'as'=>'hanghoa.store',
+]);
+Route::get('/hanghoa/{id}',[
+    'uses'=>'HanghoaController@edit',
+    'as'=>'hanghoa.edit',
+]);
+Route::patch('/hanghoa/{id}',[
+    'uses'=>'HanghoaController@update',
+    'as'=>'hanghoa.update',
+]);
+Route::delete('/hanghoa/{id}',[
+    'uses'=>'HanghoaController@destroy',
+    'as'=>'hanghoa.destroy',
+]);
+
 
 
 Route::get('/home', 'HomeController@index');
