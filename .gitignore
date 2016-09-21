@@ -3,9 +3,5 @@ assets/
 
 # Laravel 5 & Lumen specific
 local/bootstrap/cache/
-\.idea
-\.git
-.idea/blade.xml
-.idea/vcs.xml
-.idea/misc.xml
-.env
+
+local/.env
