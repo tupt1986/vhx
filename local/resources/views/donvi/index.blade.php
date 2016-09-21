@@ -15,6 +15,9 @@
         <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/donvi/create')}}', '_self')">
             <i class="icon-home"></i> Thêm mới
         </button>
+        <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/donvi/import')}}', '_self')">
+            <i class="icon-user-follow"></i> Import
+        </button>
     </div>
     <table class="table table-hover">
         <thead>

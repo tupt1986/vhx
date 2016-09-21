@@ -11,10 +11,14 @@ class donvi extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = ['tendonvi','madonvi'];
+    protected $fillable = ['madonvi','tendonvi'];
 
     public function Users(){
-        return $this->hasMany('App\User');
+        return $this->hasMany('vhx\User');
+    }
+
+    public function buucucs(){
+        return $this->hasMany('vhx\buucuc');
     }
 
 }

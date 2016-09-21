@@ -88,6 +88,15 @@ Route::get('/donvi',[
     'uses'=>'DonviController@index',
     'as'=>'donvis',
 ]);
+Route::get('/donvi/import',[
+    'uses'=>'DonviController@import',
+    'as'=>'donvi.import',
+]);
+Route::post('/donvi/import',[
+    'uses'=>'DonviController@insert',
+    'as'=>'donvi.insert',
+]);
+
 Route::get('/donvi/create',[
     'uses'=>'DonviController@create',
     'as'=>'donvi.create',
@@ -108,6 +117,7 @@ Route::delete('/donvi/{id}',[
     'uses'=>'DonviController@destroy',
     'as'=>'donvi.destroy',
 ]);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes buucucs
@@ -116,6 +126,14 @@ Route::delete('/donvi/{id}',[
 Route::get('/buucuc',[
     'uses'=>'BuucucController@index',
     'as'=>'buucucs',
+]);
+Route::get('/buucuc/import',[
+    'uses'=>'BuucucController@import',
+    'as'=>'buucuc.import',
+]);
+Route::post('/buucuc/import',[
+    'uses'=>'BuucucController@insert',
+    'as'=>'buucuc.insert',
 ]);
 Route::get('/buucuc/create',[
     'uses'=>'BuucucController@create',

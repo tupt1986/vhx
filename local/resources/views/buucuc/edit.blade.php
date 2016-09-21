@@ -33,7 +33,7 @@
                         <label class="label col col-3">Mã bưu cục:</label>
                         <div class="col col-8">
                             <label class="input">
-                                <input type="text" name="madonvi" placeholder="Nhập mã bưu cục (bắt buộc)" value="{{$buucuc->madonvi}}">
+                                <input type="text" name="mabuucuc" placeholder="Nhập mã bưu cục (bắt buộc)" value="{{$buucuc->mabuucuc}}">
                             </label>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                         <label class="label col col-3">Tên bưu cục:</label>
                         <div class="col col-8">
                             <label class="input">
-                                <input type="text" name="tendonvi" placeholder="Nhập tên bưu cục (bắt buộc)" value="{{$buucuc->tendonvi}}">
+                                <input type="text" name="tenbuucuc" placeholder="Nhập tên bưu cục (bắt buộc)" value="{{$buucuc->tenbuucuc}}">
                             </label>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             <label class="select">
                                 <select name="donvi_id" id="donvi_id">
                                     <option selected disabled>Chọn đơn vị trực thuộc</option>
-                                    @foreach($list_donvi as $donvi)
+                                    @foreach($donvis as $donvi)
                                         <option value="{{$donvi->id}}" {{($buucuc->donvi_id == $donvi->id) ? 'selected' : ''}}>{{$donvi->madonvi}} - {{$donvi->tendonvi}}</option>
                                         @endforeach
                                 </select>

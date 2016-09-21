@@ -14,6 +14,7 @@ class CreateLoaidichvusTable extends Migration
     {
         Schema::create('loaidichvus', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('tenloaidichvu',100);
             $table->timestamps();
         });
     }

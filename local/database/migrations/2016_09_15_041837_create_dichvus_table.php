@@ -14,6 +14,15 @@ class CreateDichvusTable extends Migration
     {
         Schema::create('dichvus', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('madichvu',10);
+            $table->string('tendichvu',100);
+            $table->string('dvt',20);
+            $table->integer('tileDTTL')->nullable();
+            $table->integer('dongia')->nullable();
+            $table->string('masanluongtienthu',20)->nullable();//ma CFM
+            $table->string('masanluongtienchi',20)->nullable();//ma CFM
+            $table->string('madoanhthu',20)->nullable();//ma CFM
+            $table->string('tengiaodichtien',100)->nullable();
             $table->timestamps();
         });
     }

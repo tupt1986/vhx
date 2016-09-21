@@ -14,6 +14,9 @@ class CreateHanghoasTable extends Migration
     {
         Schema::create('hanghoas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('mahanghoa',20);
+            $table->string('tenhanghoa',50);
+            $table->string('dvt',20);
             $table->timestamps();
         });
     }

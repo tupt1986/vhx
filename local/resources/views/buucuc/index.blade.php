@@ -15,6 +15,9 @@
         <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/buucuc/create')}}', '_self')">
             <i class="icon-envelope-open"></i> Thêm mới
         </button>
+        <button class="btn-u btn-brd rounded-4x" onclick="window.open('{{url('/buucuc/import')}}', '_self')">
+            <i class="icon-user-follow"></i> Import
+        </button>
     </div>
     <table class="table table-hover">
         <thead>
@@ -31,9 +34,9 @@
         @foreach($buucucs as $buucuc)
             <tr>
                     <td>{{ $stt++ }}</td>
-                    <td>{{$buucuc->tendonvi}}</td>
-                    <td>{{$buucuc->madonvi}}<input type="hidden" name="id" value="{{$buucuc->id}}"></td>
-                    <td>{{$buucuc->donvi_id}}</td>
+                    <td>{{$buucuc->tenbuucuc}}</td>
+                    <td>{{$buucuc->mabuucuc}}</td>
+                    <td>{{$buucuc->donvis->tendonvi}}</td>
                 <td>
                     <button type="button" class="btn btn-success btn-xs"
                             onclick="window.open('{{url('/buucuc/'.$buucuc->id)}}', '_self')">Chỉnh sửa thông tin
