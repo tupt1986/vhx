@@ -137,10 +137,11 @@
                                 <i class="icon-settings"></i> Thiết lập
                             </a>
                             <ul class="dropdown-menu">
+                                <li><a href="{{route('users')}}"><i class="icon-users"></i>&nbsp;&nbsp;&nbsp;Quản lý người dùng</a></li>
                                 <li><a href="{{route('donvis')}}">Quản lý đơn vị</a></li>
                                 <li><a href="{{route('buucucs')}}">Quản lý bưu cục</a></li>
                                 <li><a href="{{route('hanghoas')}}">Quản lý mã vật tư/hàng hóa</a></li>
-                                <li><a href="{{route('users')}}"><i class="icon-users"></i>&nbsp;&nbsp;&nbsp;Quản lý người dùng</a></li>
+                                <li><a href="{{route('dichvus')}}">Quản lý mã dịch vụ/giao dịch</a></li>
                             </ul>
                         </li>
                         <li>

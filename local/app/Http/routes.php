@@ -195,6 +195,43 @@ Route::delete('/hanghoa/{id}',[
     'as'=>'hanghoa.destroy',
 ]);
 
+/*
+|--------------------------------------------------------------------------
+| Application Routes dichvus
+|--------------------------------------------------------------------------
+*/
+Route::get('/dichvu',[
+    'uses'=>'DichvuController@index',
+    'as'=>'dichvus',
+]);
+Route::get('/dichvu/import',[
+    'uses'=>'DichvuController@import',
+    'as'=>'dichvu.import',
+]);
+Route::post('/dichvu/import',[
+    'uses'=>'DichvuController@insert',
+    'as'=>'dichvu.insert',
+]);
 
+Route::get('/dichvu/create',[
+    'uses'=>'DichvuController@create',
+    'as'=>'dichvu.create',
+]);
+Route::post('/dichvu/create',[
+    'uses'=>'DichvuController@store',
+    'as'=>'dichvu.store',
+]);
+Route::get('/dichvu/{id}',[
+    'uses'=>'DichvuController@edit',
+    'as'=>'dichvu.edit',
+]);
+Route::patch('/dichvu/{id}',[
+    'uses'=>'DichvuController@update',
+    'as'=>'dichvu.update',
+]);
+Route::delete('/dichvu/{id}',[
+    'uses'=>'DichvuController@destroy',
+    'as'=>'dichvu.destroy',
+]);
 
 Route::get('/home', 'HomeController@index');
